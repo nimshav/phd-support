@@ -4,35 +4,37 @@
   "description": "A React app with an Express backend, deployed to Heroku",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",         // Starts the Express server
-    "build": "react-scripts build",   // Builds the React app for production
-    "dev": "react-scripts start",     // Runs the React app in development mode
-    "test": "react-scripts test",     // Runs tests
-    "eject": "react-scripts eject",   // Ejects from React's default setup
-    "heroku-postbuild": "npm run build" // Builds the React app after deploying to Heroku
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "dev": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": ">=16.x"                  // Ensures Node.js version compatibility
+    "node": "22.11.1"
   },
   "dependencies": {
-    "express": "^4.18.2",             // Express for backend server
-    "path": "^0.12.7",                // Path module for handling file paths
-    "react": "^18.0.0",               // React core library
-    "react-dom": "^18.0.0",           // React DOM library
-    "react-scripts": "5.0.1"          // Scripts for React app management
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "dotenv": "^16.0.3",              // Manage environment variables
-    "compression": "^1.7.4",          // Middleware for gzip compression
-    "helmet": "^6.0.1"                // Middleware for securing HTTP headers
+    "dotenv": "^16.0.3",
+    "compression": "^1.7.4",
+    "helmet": "^6.0.1"
   },
-  "homepage": ".",                     // Ensures correct file paths when deployed
+  "homepage": ".",
   "keywords": [
     "react",
     "express",
     "heroku",
     "deployment"
   ],
-  "author": "Your Name",               // Replace with your name or organization
-  "license": "MIT"                     // MIT license (you can change it)
+  "author": "Your Name",
+  "license": "MIT"
 }
+
+
