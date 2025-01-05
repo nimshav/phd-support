@@ -1,32 +1,38 @@
 {
-    "name": "react-heroku-app",
-    "version": "1.0.0",
-    "description": "A React app deployed to Heroku",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
-    },
-    "engines": {
-      "node": ">=16.x"
-    },
-    "dependencies": {
-      "express": "^4.18.2",
-      "path": "^0.12.7",
-      "react": "^18.0.0",
-      "react-dom": "^18.0.0",
-      "react-scripts": "5.0.1"
-    },
-    "devDependencies": {},
-    "homepage": ".",
-    "keywords": [
-      "react",
-      "heroku",
-      "deployment",
-      "express"
-    ],
-    "author": "Your Name",
-    "license": "MIT"
-  }
+  "name": "react-express-app",
+  "version": "1.0.0",
+  "description": "A React app with an Express backend, deployed to Heroku",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",         // Starts the Express server
+    "build": "react-scripts build",   // Builds the React app for production
+    "dev": "react-scripts start",     // Runs the React app in development mode
+    "test": "react-scripts test",     // Runs tests
+    "eject": "react-scripts eject",   // Ejects from React's default setup
+    "heroku-postbuild": "npm run build" // Builds the React app after deploying to Heroku
+  },
+  "engines": {
+    "node": ">=16.x"                  // Ensures Node.js version compatibility
+  },
+  "dependencies": {
+    "express": "^4.18.2",             // Express for backend server
+    "path": "^0.12.7",                // Path module for handling file paths
+    "react": "^18.0.0",               // React core library
+    "react-dom": "^18.0.0",           // React DOM library
+    "react-scripts": "5.0.1"          // Scripts for React app management
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",              // Manage environment variables
+    "compression": "^1.7.4",          // Middleware for gzip compression
+    "helmet": "^6.0.1"                // Middleware for securing HTTP headers
+  },
+  "homepage": ".",                     // Ensures correct file paths when deployed
+  "keywords": [
+    "react",
+    "express",
+    "heroku",
+    "deployment"
+  ],
+  "author": "Your Name",               // Replace with your name or organization
+  "license": "MIT"                     // MIT license (you can change it)
+}
