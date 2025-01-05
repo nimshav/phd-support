@@ -50,7 +50,7 @@ const LandingPage = () => {
       {/* Contact Section */}
       <div>
         <h2>Get in Touch</h2>
-        <a href="mailto:nshavit@icloud.com">contact@example.com</a>
+        <a href="mailto:nshavit@icloud.com">nshavit@icloud.com</a>
       </div>
     </div>
   );
