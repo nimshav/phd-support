@@ -1,93 +1,11 @@
-import React from 'react';
-import { ArrowRight, BookOpen, Brain, Clock, Mail, MessageSquare } from 'lucide-react';
-import { Card, CardContent } from './components/ui/card'; // Adjusted import for relative path
-
-const LandingPage = () => {
-  const services = [
-    {
-      title: "Methodological Support",
-      description: "Expert guidance in research methods, study design, and overcoming methodological challenges.",
-      icon: <Brain className="w-6 h-6" aria-label="Brain Icon" />
-    },
-    {
-      title: "Personal Consultation",
-      description: "One-on-one consulting sessions to address barriers and accelerate your research progress.",
-      icon: <MessageSquare className="w-6 h-6" aria-label="Message Icon" />
-    },
-    {
-      title: "Ongoing Guidance",
-      description: "Continuous support throughout your research and writing process until final submission.",
-      icon: <Clock className="w-6 h-6" aria-label="Clock Icon" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-6">Stuck in Your Doctoral Journey?</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional guidance to help doctoral candidates overcome obstacles and advance their research.
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center mx-auto gap-2">
-            Schedule a Consultation
-            <ArrowRight className="w-5 h-5" aria-label="Arrow Icon" />
-          </button>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="text-center p-6">
-              <CardContent>
-                <div className="flex justify-center mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="bg-white rounded-lg p-8 shadow-sm mb-16 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-center">Why Choose Us?</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="flex items-start gap-3">
-            <BookOpen className="w-6 h-6 text-blue-600 mt-1" aria-label="Book Icon" />
-            <div>
-              <h3 className="font-semibold mb-2">Extensive Academic Experience</h3>
-              <p className="text-gray-600">Expert team with proven track record in research supervision.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <Clock className="w-6 h-6 text-blue-600 mt-1" aria-label="Clock Icon" />
-            <div>
-              <h3 className="font-semibold mb-2">Rapid Response</h3>
-              <p className="text-gray-600">Quick support with 24-hour response time to queries.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="text-center max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-        <div className="flex justify-center gap-4">
-          <a href="mailto:contact@example.com" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
-            <Mail className="w-5 h-5" aria-label="Mail Icon" />
-            contact@example.com
-          </a>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default LandingPage;
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctoral Support</title>
+  </head>
+  <body>
+    <div id="root"></div> <!-- React will render here -->
+  </body>
+</html>
