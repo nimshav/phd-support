@@ -1,10 +1,33 @@
+# Let's modify the provided index.css file to apply the dark mode with brown-to-orange spectrum of colors.
+
+updated_css = """
 /* Dark Mode Styles */
 body {
-  background-color: #2e2b26; /* Dark brown background */
-  color: #e9e4df; /* Light cream text */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #2e2b26; /* Dark brown background */
+  color: #e9e4df; /* Light cream text */
+}
+
+h1, h2, h3 {
+  color: #f4a259; /* Warm orange */
+}
+
+.service-card {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #f4a259; /* Warm orange border */
+  border-radius: 5px;
+  background-color: #594e42; /* Darker brown for cards */
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  color: #e9e4df; /* Light cream text */
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: #7a6249; /* Light brown hover effect */
 }
 
 header {
@@ -24,57 +47,12 @@ header p {
   margin-top: 10px;
 }
 
-.services {
-  background-color: #4a4237; /* Medium brown */
-  padding: 20px;
-}
-
-.services h2 {
-  color: #f4a259; /* Warm orange */
-  text-align: center;
-}
-
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.service-card {
-  background-color: #594e42; /* Darker brown for cards */
-  color: #e9e4df; /* Light cream text */
-  border: 2px solid #f4a259; /* Warm orange border */
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-  cursor: pointer;
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  background-color: #7a6249; /* Light brown hover effect */
-}
-
-.service-icon {
-  font-size: 2.5em;
-  color: #f4a259; /* Warm orange */
-  margin-bottom: 15px;
-}
-
 .academic-rubric {
   background-color: #4a4237; /* Medium brown */
   padding: 20px;
 }
 
-.academic-rubric h2 {
-  color: #f4a259; /* Warm orange */
-  text-align: center;
-}
-
-.academic-rubric h3 {
+.academic-rubric h2, .academic-rubric h3 {
   color: #f4a259; /* Warm orange */
 }
 
@@ -106,6 +84,7 @@ form {
 
 form label {
   margin-bottom: 5px;
+  color: #e9e4df; /* Light cream text */
 }
 
 form input,
@@ -129,4 +108,13 @@ form button {
 form button:hover {
   background-color: #d17e45; /* Slightly darker orange */
 }
+"""
+
+# Save the updated CSS back to the file
+file_path = '/mnt/data/index.css'
+
+with open(file_path, 'w') as file:
+    file.write(updated_css)
+
+file_path
 
