@@ -1,5 +1,6 @@
-# Let's modify the provided index.css file to apply the dark mode with brown-to-orange spectrum of colors.
+# Let's write the updated CSS content to the file as specified.
 
+# Define the updated CSS content
 updated_css = """
 /* Dark Mode Styles */
 body {
@@ -110,11 +111,13 @@ form button:hover {
 }
 """
 
-# Save the updated CSS back to the file
+# Specify the file path
 file_path = '/mnt/data/index.css'
 
+# Write the CSS to the file
 with open(file_path, 'w') as file:
     file.write(updated_css)
 
 file_path
+
 
