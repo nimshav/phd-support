@@ -1,20 +1,132 @@
+/* Dark Mode Styles */
 body {
+  background-color: #2e2b26; /* Dark brown background */
+  color: #e9e4df; /* Light cream text */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  color: #333;
 }
 
-h1, h2, h3 {
-  color: #0056b3;
+header {
+  background-color: #3b332c; /* Slightly lighter brown for contrast */
+  color: #f4a259; /* Warm orange */
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.services {
+  background-color: #4a4237; /* Medium brown */
+  padding: 20px;
+}
+
+.services h2 {
+  color: #f4a259; /* Warm orange */
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .service-card {
-  margin: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #594e42; /* Darker brown for cards */
+  color: #e9e4df; /* Light cream text */
+  border: 2px solid #f4a259; /* Warm orange border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: #7a6249; /* Light brown hover effect */
+}
+
+.service-icon {
+  font-size: 2.5em;
+  color: #f4a259; /* Warm orange */
+  margin-bottom: 15px;
+}
+
+.academic-rubric {
+  background-color: #4a4237; /* Medium brown */
+  padding: 20px;
+}
+
+.academic-rubric h2 {
+  color: #f4a259; /* Warm orange */
   text-align: center;
 }
+
+.academic-rubric h3 {
+  color: #f4a259; /* Warm orange */
+}
+
+.academic-rubric ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.academic-rubric li {
+  margin-bottom: 10px;
+}
+
+.contact {
+  background-color: #3b332c; /* Slightly lighter brown */
+  padding: 20px;
+}
+
+.contact h2 {
+  color: #f4a259; /* Warm orange */
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #f4a259; /* Warm orange */
+  border-radius: 5px;
+  background-color: #2e2b26; /* Dark brown input background */
+  color: #e9e4df; /* Light cream text */
+}
+
+form button {
+  background-color: #f4a259; /* Warm orange */
+  color: #2e2b26; /* Dark brown text */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #d17e45; /* Slightly darker orange */
+}
+
