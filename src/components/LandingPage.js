@@ -1,8 +1,8 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Clock } from 'lucide-react'; // Importing icons
+import { ArrowRight, BookOpen, Clock, FileText } from 'lucide-react'; // Importing icons
 
-const ServiceCard = ({ icon, title, description }) => (
-  <div className="service-card">
+const ServiceCard = ({ icon, title, description, onClick }) => (
+  <div className="service-card" onClick={onClick} role="button" tabIndex={0}>
     <div className="service-icon" aria-label={`${title} icon`}>
       {icon}
     </div>
@@ -17,18 +17,31 @@ const LandingPage = () => {
       title: "Methodological Support",
       description: "Expert guidance in research methods, study design, and overcoming methodological challenges.",
       icon: <ArrowRight />,
+      link: "#methodological-support",
     },
     {
       title: "Personal Consultation",
       description: "One-on-one consulting sessions to address barriers and accelerate your research progress.",
       icon: <BookOpen />,
+      link: "#personal-consultation",
     },
     {
       title: "Time Management",
       description: "Strategies and tools for effectively managing your academic workload.",
       icon: <Clock />,
+      link: "#time-management",
+    },
+    {
+      title: "Academic Services Rubric",
+      description: "Comprehensive rubric outlining qualifications, offerings, and client outcomes.",
+      icon: <FileText />,
+      link: "#academic-services-rubric",
     },
   ];
+
+  const handleServiceClick = (link) => {
+    document.querySelector(link).scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="landing-page">
@@ -48,21 +61,21 @@ const LandingPage = () => {
               icon={service.icon}
               title={service.title}
               description={service.description}
+              onClick={() => handleServiceClick(service.link)}
             />
           ))}
         </div>
       </section>
 
       {/* Academic Rubric Section */}
-      <section className="academic-rubric">
+      <section id="academic-services-rubric" className="academic-rubric">
         <h2>Academic Services Rubric</h2>
         <div className="rubric-content">
           <h3>Expertise and Qualifications</h3>
           <ul>
             <li>
-              <strong>Educational Background:</strong> Doctorate-level education in
-              [specific field] with extensive research experience in
-              [key areas of specialization].
+              <strong>Educational Background:</strong> Doctorate-level education
+              in [specific field] with extensive research experience.
             </li>
             <li>
               <strong>Research Contributions:</strong> Published in leading
@@ -73,7 +86,6 @@ const LandingPage = () => {
               on significant academic projects.
             </li>
           </ul>
-
           <h3>Service Offerings</h3>
           <ul>
             <li>
@@ -89,7 +101,6 @@ const LandingPage = () => {
               advanced concepts and developing engaging materials.
             </li>
           </ul>
-
           <h3>Approach to Excellence</h3>
           <ul>
             <li>
@@ -105,7 +116,6 @@ const LandingPage = () => {
               for clarity without losing depth.
             </li>
           </ul>
-
           <h3>Client Outcomes</h3>
           <ul>
             <li>Enhanced manuscript quality for publication.</li>
@@ -114,27 +124,8 @@ const LandingPage = () => {
           </ul>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="contact">
-        <h2>Contact Me</h2>
-        <form>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
-      </section>
     </div>
   );
 };
 
 export default LandingPage;
-
-
