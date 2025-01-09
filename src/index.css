@@ -42,6 +42,7 @@ header p {
 .tabs {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   background-color: #4a4237; /* Medium brown */
   padding: 10px;
   border-bottom: 2px solid #a97d5d; /* Brown border */
@@ -55,6 +56,7 @@ header p {
   padding: 10px 20px;
   cursor: pointer;
   transition: color 0.3s, border-bottom 0.3s;
+  flex: 1 1 100px; /* Flexible buttons that shrink and wrap */
 }
 
 .tab-button:hover,
@@ -69,67 +71,28 @@ header p {
   border: 1px solid #3b332c; /* Medium brown border */
   border-radius: 5px;
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 90%; /* Adjust to fit smaller screens */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Links inside content */
-.tab-content a {
-  color: #a97d5d; /* Warm brown links */
+/* Responsive Layout */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em; /* Reduce header size for smaller screens */
+  }
+
+  header p {
+    font-size: 1em; /* Adjust subtext size */
+  }
+
+  .tab-button {
+    font-size: 0.9em; /* Smaller buttons on small screens */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  .tab-content {
+    padding: 15px; /* Reduce padding for content */
+    font-size: 0.9em; /* Adjust font size for readability */
+  }
 }
 
-.tab-content a:hover {
-  color: #8c6746; /* Darker brown for hover */
-}
-
-/* Forms (if any) */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin-bottom: 5px;
-  color: #e9e4df; /* Light cream text */
-}
-
-form input,
-form textarea,
-form button {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 2px solid #a97d5d; /* Warm brown border */
-  border-radius: 5px;
-  background-color: #2e2b26; /* Dark brown background */
-  color: #e9e4df; /* Light cream text */
-}
-
-form button {
-  background-color: #a97d5d; /* Warm brown button */
-  color: #2e2b26; /* Dark brown text */
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #8c6746; /* Darker brown for hover */
-}
-
-/* Cards (if any) */
-.service-card {
-  margin: 20px;
-  padding: 15px;
-  border: 1px solid #a97d5d; /* Warm brown border */
-  border-radius: 5px;
-  background-color: #594e42; /* Darker brown */
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-  color: #e9e4df; /* Light cream text */
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  background-color: #7a6249; /* Lighter brown hover effect */
-}
