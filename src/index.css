@@ -1,4 +1,4 @@
-/* Dark Mode Styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,28 +8,22 @@ body {
 }
 
 h1, h2, h3 {
-  color: #f4a259; /* Warm orange */
+  color: #a97d5d; /* Warm brown for headings */
 }
 
-.service-card {
-  margin: 20px;
-  padding: 15px;
-  border: 1px solid #f4a259; /* Warm orange border */
-  border-radius: 5px;
-  background-color: #594e42; /* Darker brown for cards */
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-  color: #e9e4df; /* Light cream text */
+a {
+  color: #a97d5d; /* Warm brown links */
+  text-decoration: none;
 }
 
-.service-card:hover {
-  transform: scale(1.05);
-  background-color: #7a6249; /* Light brown hover effect */
+a:hover {
+  color: #8c6746; /* Darker brown for hover effect */
 }
 
+/* Header */
 header {
-  background-color: #3b332c; /* Slightly lighter brown for contrast */
-  color: #f4a259; /* Warm orange */
+  background-color: #3b332c; /* Medium brown */
+  color: #e9e4df; /* Light cream text */
   text-align: center;
   padding: 20px;
 }
@@ -44,34 +38,51 @@ header p {
   margin-top: 10px;
 }
 
-.academic-rubric {
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
   background-color: #4a4237; /* Medium brown */
+  padding: 10px;
+  border-bottom: 2px solid #a97d5d; /* Brown border */
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  color: #e9e4df; /* Light cream text */
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button:hover,
+.tab-button:focus {
+  color: #a97d5d; /* Warm brown for hover */
+  border-bottom: 2px solid #a97d5d; /* Underline on hover */
+}
+
+.tab-content {
   padding: 20px;
+  background-color: #594e42; /* Darker brown for content area */
+  border: 1px solid #3b332c; /* Medium brown border */
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.academic-rubric h2, .academic-rubric h3 {
-  color: #f4a259; /* Warm orange */
+/* Links inside content */
+.tab-content a {
+  color: #a97d5d; /* Warm brown links */
 }
 
-.academic-rubric ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.tab-content a:hover {
+  color: #8c6746; /* Darker brown for hover */
 }
 
-.academic-rubric li {
-  margin-bottom: 10px;
-}
-
-.contact {
-  background-color: #3b332c; /* Slightly lighter brown */
-  padding: 20px;
-}
-
-.contact h2 {
-  color: #f4a259; /* Warm orange */
-  text-align: center;
-}
-
+/* Forms (if any) */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -89,19 +100,34 @@ form textarea,
 form button {
   margin-bottom: 15px;
   padding: 10px;
-  border: 2px solid #f4a259; /* Warm orange */
+  border: 2px solid #a97d5d; /* Warm brown border */
   border-radius: 5px;
-  background-color: #2e2b26; /* Dark brown input background */
+  background-color: #2e2b26; /* Dark brown background */
   color: #e9e4df; /* Light cream text */
 }
 
 form button {
-  background-color: #f4a259; /* Warm orange */
+  background-color: #a97d5d; /* Warm brown button */
   color: #2e2b26; /* Dark brown text */
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #d17e45; /* Slightly darker orange */
+  background-color: #8c6746; /* Darker brown for hover */
 }
+
+/* Cards (if any) */
+.service-card {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #a97d5d; /* Warm brown border */
+  border-radius: 5px;
+  background-color: #594e42; /* Darker brown */
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  color: #e9e4df; /* Light cream text */
+}
+
+.service-card:hover {
+  transform: scale(1.05);

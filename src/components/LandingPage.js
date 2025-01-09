@@ -1,160 +1,105 @@
-import React from 'react';
-import { ArrowRight, BookOpen, Clock, FileText } from 'lucide-react'; // Importing icons
+import React from "react";
+import "./index.css";
 
-// Service Card Component
-const ServiceCard = ({ icon, title, description, onClick }) => (
-  <div
-    className="service-card"
-    onClick={onClick}
-    role="button"
-    tabIndex={0}
-  >
-    <div className="service-icon" aria-label={`${title} icon`}>
-      {icon}
-    </div>
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </div>
-);
+function LandingPage() {
+  const [activeTab, setActiveTab] = React.useState("about-me");
 
-// Landing Page Component
-const LandingPage = () => {
-  const services = [
-    {
-      title: "Methodological Support",
-      description:
-        "Expert guidance in research methods, study design, and overcoming methodological challenges.",
-      icon: <ArrowRight />,
-      link: "#methodological-support",
-    },
-    {
-      title: "Personal Consultation",
-      description:
-        "One-on-one consulting sessions to address barriers and accelerate your research progress.",
-      icon: <BookOpen />,
-      link: "#personal-consultation",
-    },
-    {
-      title: "Time Management",
-      description:
-        "Strategies and tools for effectively managing your academic workload.",
-      icon: <Clock />,
-      link: "#time-management",
-    },
-    {
-      title: "Academic Services Rubric",
-      description:
-        "Comprehensive rubric outlining qualifications, offerings, and client outcomes.",
-      icon: <FileText />,
-      link: "#academic-services-rubric",
-    },
+  const tabs = [
+    { id: "about-me", label: "About Me", content: (
+      <div>
+        <h2>About Me</h2>
+        <p>I am Nimrod Shavit, a researcher in the field of communication and the humanities with extensive experience in academic mentoring and editing.</p>
+        <p>Advanced degrees from Israel and the U.S., with publications in leading journals.</p>
+        <p>Personalized approach tailored to each client.</p>
+        <p>Proficiency in English and expertise in advanced tools like AI.</p>
+        <a href="#">Link to full profile</a>
+      </div>
+    ) },
+    { id: "services", label: "Key Services", content: (
+      <div>
+        <h2>Key Services</h2>
+        <ul>
+          <li>Research Guidance: Support for MA and PhD students, as well as institutional researchers stuck in academic writing.</li>
+          <li>Personalized Meetings: Tailored one-on-one sessions focused on specific project needs.</li>
+          <li>Problem-Solving: Assistance in writing research proposals, designing methodologies, and analyzing results.</li>
+          <li>Outline and Timeline Creation: Custom schedules adapted to client availability.</li>
+          <li>Time Management Strategies: Techniques to optimize research and writing workflows.</li>
+          <li>AI Tools Training: Guidance on using advanced tools like ChatGPT and writing custom scripts.</li>
+          <li>Editing: Structural, stylistic, and rational editing, as well as proofreading.</li>
+          <li>Adherence to Scientific Standards: Formatting and writing in accordance with standards like APA or MLA.</li>
+        </ul>
+      </div>
+    ) },
+    { id: "delivery", label: "Service Delivery Options", content: (
+      <div>
+        <h2>Service Delivery Options</h2>
+        <ul>
+          <li><strong>Intensive:</strong> Frequent weekly or bi-weekly meetings for high-priority or demanding projects.</li>
+          <li><strong>Regular:</strong> Meetings at key points in the research process, such as chapter submissions or the end of data collection.</li>
+          <li><strong>Minimal:</strong> Monthly or on-demand meetings to address specific challenges or provide direction.</li>
+        </ul>
+      </div>
+    ) },
+    { id: "testimonials", label: "Client Testimonials", content: (
+      <div>
+        <h2>Client Testimonials</h2>
+        <ul>
+          <li><strong>Asaf:</strong> Creative solutions for lesson planning and academic projects (PhD, Hebrew).</li>
+          <li><strong>Alina:</strong> Writing articles and publishing internationally (PhD, English).</li>
+          <li><strong>Liana:</strong> Editing and writing tailored for an international audience (PhD, English).</li>
+          <li><strong>Anna:</strong> Submission of a quality thesis proposal (MA, Hebrew).</li>
+        </ul>
+      </div>
+    ) },
+    { id: "biography", label: "Academic Biography", content: (
+      <div>
+        <h2>Academic Biography</h2>
+        <p>Focus on communication research, academic editing, and mentoring.</p>
+        <p>Teaching experience in prominent academic institutions.</p>
+        <p>Publications in international journals.</p>
+        <p>Examples of professional writing for inspiration.</p>
+        <a href="#">Downloadable PDF CV</a>
+      </div>
+    ) },
+    { id: "resources", label: "Resources", content: (
+      <div>
+        <h2>Resources</h2>
+        <ul>
+          <li>Guide to Academic Structure: A detailed guide on how to structure academic work effectively.</li>
+          <li>Sample Editing Work: Examples showcasing stylistic, structural, and writing adjustments.</li>
+          <li>AI Tips and Tools: Tips and tools for efficient research and writing using AI.</li>
+        </ul>
+      </div>
+    ) },
+    { id: "contact", label: "Contact", content: (
+      <div>
+        <h2>Contact</h2>
+        <p>Encourage visitors to reach out for any academic assistance or inquiries.</p>
+        <p>Email: <a href="mailto:nshavit@icloud.com">nshavit@icloud.com</a></p>
+      </div>
+    ) },
   ];
-
-  const handleServiceClick = (link) => {
-    const target = document.querySelector(link);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="landing-page">
-      {/* Header Section */}
-      <header className="header">
-        <h1>Nimrod Shavit - Academic Services</h1>
-        <p>
-          Your trusted partner in academic excellence and research
-          development.
-        </p>
+      <header>
+        <h1>Doctoral Support</h1>
+        <p>Your partner in academic success.</p>
       </header>
-
-      {/* Services Section */}
-      <section className="services">
-        <h2>Our Services</h2>
-        <div className="service-cards">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              onClick={() => handleServiceClick(service.link)}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Academic Rubric Section */}
-      <section
-        id="academic-services-rubric"
-        className="academic-rubric"
-      >
-        <h2>Academic Services Rubric</h2>
-        <div className="rubric-content">
-          <h3>Expertise and Qualifications</h3>
-          <ul>
-            <li>
-              <strong>Educational Background:</strong> Doctorate-level
-              education in a relevant field with extensive research
-              experience.
-            </li>
-            <li>
-              <strong>Research Contributions:</strong> Published in
-              leading academic journals with advanced knowledge in
-              theoretical paradigms.
-            </li>
-            <li>
-              <strong>Collaborations:</strong> Partnered with prominent
-              scholars on significant academic projects.
-            </li>
-          </ul>
-          <h3>Service Offerings</h3>
-          <ul>
-            <li>
-              <strong>Manuscript Review and Editing:</strong> Expertise in
-              streamlining complex texts while maintaining scientific
-              precision.
-            </li>
-            <li>
-              <strong>Research Development:</strong> Skilled in refining
-              arguments, ensuring coherence, and bridging theoretical gaps.
-            </li>
-            <li>
-              <strong>Educational Support:</strong> Experience in teaching
-              advanced concepts and developing engaging materials.
-            </li>
-          </ul>
-          <h3>Approach to Excellence</h3>
-          <ul>
-            <li>
-              <strong>Scientific Rigor:</strong> Emphasis on accuracy,
-              coherence, and alignment with the latest literature.
-            </li>
-            <li>
-              <strong>Tailored Services:</strong> Focused on understanding
-              client needs and providing personalized feedback.
-            </li>
-            <li>
-              <strong>Accessible Communication:</strong> Simplifying
-              complex ideas for clarity without losing depth.
-            </li>
-          </ul>
-          <h3>Client Outcomes</h3>
-          <ul>
-            <li>Enhanced manuscript quality for publication.</li>
-            <li>
-              Improved understanding of advanced theoretical concepts.
-            </li>
-            <li>
-              Clear, impactful academic writing tailored for specific
-              audiences.
-            </li>
-          </ul>
-        </div>
-      </section>
+      <div className="tabs">
+        {tabs.map(tab => (
+          <button key={tab.id} className="tab-button" onClick={() => setActiveTab(tab.id)}>
+            {tab.label}
+          </button>
+        ))}
+      </div>
+      <div className="tab-content">
+        {tabs.find(tab => tab.id === activeTab)?.content}
+      </div>
     </div>
   );
-};
+}
 
 export default LandingPage;
+
 

@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; // Required for React 18+
-import './index.css'; // CSS for styling (optional)
-import App from './App'; // Main app component
+import React from "react";
+import ReactDOM from "react-dom/client";
+import LandingPage from "./LandingPage";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root')); // React 18 entry point
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <LandingPage />
   </React.StrictMode>
 );
 
