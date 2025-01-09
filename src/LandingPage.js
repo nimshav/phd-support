@@ -58,7 +58,7 @@ function LandingPage() {
         <p>Teaching experience in prominent academic institutions.</p>
         <p>Publications in international journals.</p>
         <p>Examples of professional writing for inspiration.</p>
-        <a href="#">Downloadable PDF CV</a>
+        <a href="https://u.pcloud.link/publink/show?code=XZ76WJ5Zp8asj89cwVSXoDXsr1OeEQxLPC8y" target="_blank" rel="noopener noreferrer">Downloadable PDF CV</a>
       </div>
     ) },
     { id: "resources", label: "Resources", content: (
@@ -74,7 +74,6 @@ function LandingPage() {
     { id: "contact", label: "Contact", content: (
       <div>
         <h2>Contact</h2>
-        <p>Encourage visitors to reach out for any academic assistance or inquiries.</p>
         <p>Email: <a href="mailto:nshavit@icloud.com">nshavit@icloud.com</a></p>
       </div>
     ) },
