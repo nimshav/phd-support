@@ -1,7 +1,3 @@
-# Let's write the updated CSS content to the file as specified.
-
-# Define the updated CSS content
-updated_css = """
 /* Dark Mode Styles */
 body {
   font-family: Arial, sans-serif;
@@ -109,15 +105,3 @@ form button {
 form button:hover {
   background-color: #d17e45; /* Slightly darker orange */
 }
-"""
-
-# Specify the file path
-file_path = '/mnt/data/index.css'
-
-# Write the CSS to the file
-with open(file_path, 'w') as file:
-    file.write(updated_css)
-
-file_path
-
-
