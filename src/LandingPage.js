@@ -51,16 +51,6 @@ function LandingPage() {
         </ul>
       </div>
     ) },
-    { id: "biography", label: "Academic Biography", content: (
-      <div>
-        <h2>Academic Biography</h2>
-        <p>Focus on communication research, academic editing, and mentoring.</p>
-        <p>Teaching experience in prominent academic institutions.</p>
-        <p>Publications in international journals.</p>
-        <p>Examples of professional writing for inspiration.</p>
-        <a href="https://u.pcloud.link/publink/show?code=XZ76WJ5Zp8asj89cwVSXoDXsr1OeEQxLPC8y" target="_blank" rel="noopener noreferrer">Downloadable PDF CV</a>
-      </div>
-    ) },
     { id: "resources", label: "Resources", content: (
       <div>
         <h2>Resources</h2>
