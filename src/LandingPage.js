@@ -88,7 +88,7 @@ function LandingPage() {
             </a>
           </li>
           <li>
-            <a href="https://open-source-humanities.example.com/contact" target="_blank" rel="noopener noreferrer">
+            <a href="https://open-source-humanities-bf6815244991.herokuapp.com" target="_blank" rel="noopener noreferrer">
               Explore our resources and projects supporting accessible humanities education
             </a>
           </li>
