@@ -75,6 +75,24 @@ function LandingPage() {
       <div>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:nshavit@icloud.com">nshavit@icloud.com</a></p>
+        <p>Follow my profiles:</p>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/nimrod-shavit-6707a7345/" target="_blank" rel="noopener noreferrer">
+              LinkedIn Profile
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fi%2Fflow%2Flogin" target="_blank" rel="noopener noreferrer">
+              Twitter Civic Engagement
+            </a>
+          </li>
+          <li>
+            <a href="https://open-source-humanities.example.com/contact" target="_blank" rel="noopener noreferrer">
+              Explore our resources and projects supporting accessible humanities education
+            </a>
+          </li>
+        </ul>
       </div>
     ) },
   ];
