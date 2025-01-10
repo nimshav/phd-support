@@ -12,7 +12,7 @@ function LandingPage() {
         <p>Advanced degrees from Israel and the U.S., with publications in leading journals.</p>
         <p>Personalized approach tailored to each client.</p>
         <p>Proficiency in English and expertise in advanced tools like AI.</p>
-        <a href="#">Link to full profile</a>
+        <a href="https://dry-hamlet-69726-31baf6235fe7.herokuapp.com/#teaching">Link to full profile</a>
       </div>
     ) },
     { id: "services", label: "Key Services", content: (
